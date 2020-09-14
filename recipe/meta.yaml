@@ -1,5 +1,5 @@
 {% set name = "diraccfg" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 964f2b51bdecfcb195d3f11bb81466eac1cb02686558a319ca62c0ffd8a60d73
+  sha256: 2e2b52854b8b5d98ea551d2487af126e87bdd4b9f0bd64f61ffcbe01169d2fb8
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - diraccfg = diraccfg.__main__:parseArgs
 
@@ -40,7 +40,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: 'DIRAC stand-alone cfg files parser'
+  summary: DIRAC stand-alone cfg files parser
   description: |
     diraccfg provides a parser for the configuration files used by
     [DIRAC](https://github.com/DIRACGrid/DIRAC/) and its associated projects.

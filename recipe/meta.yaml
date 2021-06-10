@@ -1,5 +1,5 @@
 {% set name = "diraccfg" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e2b52854b8b5d98ea551d2487af126e87bdd4b9f0bd64f61ffcbe01169d2fb8
+  sha256: a42a2f7436c9f5d0ea21807013db55e5e8797f135cb6c9891863abeadd127434
 
 build:
   number: 0
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=2.7
     - pip
     - setuptools_scm
   run:
-    - python
+    - python >=2.7
     - six
 
 test:

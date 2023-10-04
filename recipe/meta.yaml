@@ -1,5 +1,5 @@
 {% set name = "diraccfg" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diraccfg-{{ version }}.tar.gz
-  sha256: d814cb4730d697aa21095ebaa22a461ac7356f348957569eb048d6c8f1d2dcba
+  sha256: 79d1abba8520e707cdd482c5de98105caf27e78121c4c1e2273cc2329b5ed902
 
 build:
   entry_points:
